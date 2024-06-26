@@ -181,11 +181,7 @@ resource "aws_instance" "public-instance" {
     Name = "public-instance"
   }
 }
-/*
-resource "aws_route53_zone" "my_hosted_zone" {
-  name = "myexample.com"
-}
-*/
+
 resource "aws_route53_zone" "private" {
   name = "cohogov.co.uk"
 
