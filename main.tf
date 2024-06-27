@@ -177,6 +177,13 @@ resource "aws_instance" "public-instance" {
   ami           = "ami-053a617c6207ecc7b"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public-subnet-1.id
+  user_data = <<-EOF
+  #!/bin/bash
+  echo "*** Installing apache2"
+  sudo apt update -y
+  sudo apt install apache2 -y
+  echo "*** Completed Installing apache2"
+  EOF
   tags = {
     Name = "public-instance"
   }
