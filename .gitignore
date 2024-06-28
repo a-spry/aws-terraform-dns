@@ -1,0 +1,9 @@
+*.hcl
+*.terraform/
+
+*.tfstate
+*.backup
+
+# Local Terraform workspace data
+terraform.tfstate.backup
+terraform.tfstate.d
