@@ -165,7 +165,7 @@ resource "aws_security_group" "db-sg" {
 
 
 resource "aws_instance" "private-instance" {
-  ami           = "ami-0b53285ea6c7a08a7"
+  ami           = "ami-0607a9783dd204cae"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.private-subnet-1.id
   tags = {
@@ -174,7 +174,7 @@ resource "aws_instance" "private-instance" {
 }
 
 resource "aws_instance" "public-instance" {
-  ami           = "ami-053a617c6207ecc7b"
+  ami           = "ami-0607a9783dd204cae"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public-subnet-1.id
   user_data = <<-EOF
